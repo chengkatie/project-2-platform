@@ -1,4 +1,5 @@
 <!doctype html>
+<audio id="theme1" src="audio/heartonwave.mp3" onended="theme1End()"></audio>
 <script src="code/game.js"></script>
 <script src="code/game_levels.js"></script>
 
@@ -6,6 +7,12 @@
 
 <body>
   <script>
+  //music is added and will loop when the song is over
+		var theme1 = document.getElementById("theme1");
+		theme1.play();
+		function theme1End(){
+			theme1.pause();
+		}
     runGame(GAME_LEVELS, DOMDisplay);
   </script>
 </body>
